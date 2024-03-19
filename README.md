@@ -1,6 +1,6 @@
 
 ### Task
-The assignment is to develop an image fetching application using the UnSplash API. This application should enable the users to add a random image to a list, that is persisted across sessions.
+The assignment is to develop an image-fetching application using the UnSplash API. This application should enable the users to add a random image to a list, that is persisted across sessions.
 
 #### API documentation
 The UnSplash API requires a key. It can be obtained through this [url](https://unsplash.com/documentation#creating-a-developer-account) by creating a developer account.
@@ -24,13 +24,13 @@ helloclue.android.application, helloclue.android.library, helloclue.android.test
 helloclue.android.application.compose, helloclue.android.library.compose: Configures Jetpack Compose options
 
 #### Architecture
-MVVM was chosen due to its lifecycle awareness, separation os concerns layers, testability and reusability.
+MVVM was chosen due to its lifecycle awareness, separation of concerns layers, testability and reusability.
 Hilt is being used to make it easier
 
 #### TODO
 - Hide Unsplash API key in gradle.properties and using build.config. In case we would be using different keys for different flavor, it could also be set different keys for each.
 - More Modularization.If this would be just the start of a bigger project and the pros of modularization are many (reduced build time, scalability, encapsulation...)  The packages defined in app would be transformed into modules. Eg: feature/photos would go under core or could be a completely separate module. Same for network
-- More unit tests needed to cover all classes. Missing ones for Daos, Usecases, ViewModel and Composables
+- More unit tests needed to cover all classes. Missing ones for Daos, Usecases, ViewModel and Composables(1 is done, but could also be adapted to be used in unit tests with RoboElectric, not androidTest)
 - Caching
 - Better looking UI following material guidelines
 - UI more granularized into smaller composables
@@ -43,7 +43,7 @@ Hilt is being used to make it easier
 Screens using Jetpack Compose and Material3.
 The idea of core:DesignSystem is to keep the atoms(https://atomicdesign.bradfrost.com/chapter-2/) in place according to your design system in figma.
 Themes and basic components can be wrapped according to your app.
-core:ui implements your specific components (molecules,templates) making use of the deisgnsystem. All components should be tested
+core:ui implements your specific components (molecules,templates) making use of the designsystem. All components should be tested
 
 #### Tests
 Some unit tests and compose test in place. Using dagger Hilt for easier testing.
